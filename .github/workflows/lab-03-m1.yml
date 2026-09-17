@@ -1,0 +1,30 @@
+name: Lab 03 M1
+
+on:
+  pull_request:
+    paths:
+      - "labs/lab-03-governed-evidence-agent/**"
+      - ".github/workflows/lab-03-m1.yml"
+  push:
+    branches: [main]
+    paths:
+      - "labs/lab-03-governed-evidence-agent/**"
+      - ".github/workflows/lab-03-m1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic-baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile reference implementation
+        working-directory: labs/lab-03-governed-evidence-agent/reference_impl/python
+        run: python -m compileall -q .
+      - name: Run contract tests
+        working-directory: labs/lab-03-governed-evidence-agent/reference_impl/python
+        run: python -m unittest -v

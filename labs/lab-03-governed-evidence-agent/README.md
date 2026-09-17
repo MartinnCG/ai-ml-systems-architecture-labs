@@ -69,6 +69,12 @@ template, model/configuration, validator version and final disposition.
 - hiding uncertainty behind fluent language;
 - claiming that identical prompts guarantee identical model text.
 
+## Current status
+
+- **M0 complete:** contracts, trust boundaries and evaluation gates reviewed.
+- **M1 implemented for review:** deterministic baseline, audit record, public
+  fixture and adversarial tests; no model or external API.
+
 ## Delivery sequence
 
 1. **M0 — Contracts:** architecture, threat model and evaluation contract.

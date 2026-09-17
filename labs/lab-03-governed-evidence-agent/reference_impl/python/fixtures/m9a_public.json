@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "packet_id": "packet-m9a-public-example",
+  "purpose": "historical_replay_qualification",
+  "as_of": "2026-09-17T00:00:00Z",
+  "evidence": [
+    {
+      "evidence_id": "M9A-RESULT-01",
+      "kind": "qualification_summary",
+      "facts": {
+        "accepted_records": 38349,
+        "rejected_records": 0,
+        "source_streams": 6
+      },
+      "observed_at": "2026-05-25T00:00:00Z",
+      "classification": "public",
+      "content": "Sanitised aggregate qualification result."
+    },
+    {
+      "evidence_id": "M9A-RESULT-02",
+      "kind": "replay_check",
+      "facts": {
+        "independent_replay_match": true
+      },
+      "observed_at": "2026-09-17T00:00:00Z",
+      "classification": "public",
+      "content": "Two independent replays produced the same final state."
+    }
+  ]
+}
