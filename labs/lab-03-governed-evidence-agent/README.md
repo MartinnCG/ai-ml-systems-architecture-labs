@@ -72,8 +72,10 @@ template, model/configuration, validator version and final disposition.
 ## Current status
 
 - **M0 complete:** contracts, trust boundaries and evaluation gates reviewed.
-- **M1 implemented for review:** deterministic baseline, audit record, public
-  fixture and adversarial tests; no model or external API.
+- **M1 complete:** deterministic baseline, audit record, public fixture and
+  adversarial tests.
+- **M2 implemented for review:** provider-neutral model boundary with strict
+  proposal parsing and audit digests; verified with fake adapters and no API.
 
 ## Delivery sequence
 

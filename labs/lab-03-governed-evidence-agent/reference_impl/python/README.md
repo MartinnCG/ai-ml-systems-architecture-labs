@@ -25,6 +25,21 @@ the allowlisted structured facts needed by the selected purpose.
 
 ## What this does not prove
 
-The baseline does not evaluate semantic entailment, call a model, retrieve from
-external systems or authorize an operational action. It establishes the control
-path against which the M2 model adapter will be tested.
+The baseline does not evaluate semantic entailment, retrieve from external
+systems or authorize an operational action.
+
+## M2 provider-neutral boundary
+
+
+`model_adapter.py` adds a minimal provider protocol without importing a vendor
+SDK or exposing tools. Deterministic fake adapters exercise the boundary:
+
+- proposals must match the decision-brief schema;
+- citations and authority language are validated by M1;
+- adapter errors fail closed;
+- prompt, request, provider/model, configuration, proposal and brief are
+  represented by audit digests;
+- secret-like configuration keys are rejected.
+
+M2 does not yet establish that a cited claim is semantically entailed by its
+evidence. That adversarial support evaluation remains M3.

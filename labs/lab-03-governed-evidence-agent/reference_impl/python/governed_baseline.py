@@ -118,6 +118,11 @@ def _digest(value: Any) -> str:
     return hashlib.sha256(_canonical(value)).hexdigest()
 
 
+def canonical_digest(value: Any) -> str:
+    """Return the stable digest used by control-plane audit records."""
+    return _digest(value)
+
+
 def _parse_utc(value: str) -> datetime:
     try:
         parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
