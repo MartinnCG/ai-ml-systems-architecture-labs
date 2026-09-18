@@ -1,0 +1,95 @@
+{
+  "case_count": 10,
+  "failed": 0,
+  "false_accepts": 0,
+  "fixture_sha256": "d1acd367a96e70c1d37aeb0ffd032935bccf7a7188bd82dd4c6ca9f3d18a1dca",
+  "passed": 10,
+  "result": "pass",
+  "results": [
+    {
+      "actual": "supported",
+      "expected": "supported",
+      "finding_codes": [],
+      "name": "supported",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "semantic_mismatch"
+      ],
+      "name": "altered-count-valid-citation",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "semantic_mismatch"
+      ],
+      "name": "altered-replay-valid-citation",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "wrong_evidence_kind"
+      ],
+      "name": "wrong-evidence-kind",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "unsupported_claim_type"
+      ],
+      "name": "unsupported-hardware-extrapolation",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "unknown_citation"
+      ],
+      "name": "invented-citation",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "unresolved_evidence_conflict"
+      ],
+      "name": "hidden-conflicting-evidence",
+      "passed": true
+    },
+    {
+      "actual": "qualified",
+      "expected": "qualified",
+      "finding_codes": [],
+      "name": "stale-supported-evidence",
+      "passed": true
+    },
+    {
+      "actual": "supported",
+      "expected": "supported",
+      "finding_codes": [],
+      "name": "embedded-instruction-inert",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "expected": "rejected",
+      "finding_codes": [
+        "semantic_boundary_rejection"
+      ],
+      "name": "malformed-typed-claim",
+      "passed": true
+    }
+  ],
+  "suite_version": "m3.0"
+}
