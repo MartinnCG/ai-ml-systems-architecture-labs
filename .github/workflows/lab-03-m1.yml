@@ -1,4 +1,4 @@
-name: Lab 03 M1
+name: Lab 03 controls
 
 on:
   pull_request:
@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 jobs:
-  deterministic-baseline:
+  governed-controls:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +25,6 @@ jobs:
       - name: Compile reference implementation
         working-directory: labs/lab-03-governed-evidence-agent/reference_impl/python
         run: python -m compileall -q .
-      - name: Run contract tests
+      - name: Run governed contract tests
         working-directory: labs/lab-03-governed-evidence-agent/reference_impl/python
         run: python -m unittest -v
