@@ -43,3 +43,21 @@ SDK or exposing tools. Deterministic fake adapters exercise the boundary:
 
 M2 does not yet establish that a cited claim is semantically entailed by its
 evidence. That adversarial support evaluation remains M3.
+
+## M3 semantic-support guard
+
+`semantic_guard.py` narrows accepted model output to typed assertions. It checks
+each asserted value against the cited structured evidence and then renders the
+final factual sentence deterministically. This prevents a fluent model from
+using a real citation to support altered numbers, a false replay result or an
+unsupported live-hardware claim.
+
+Run and verify the adversarial suite:
+
+```bash
+python run_m3_evaluation.py --check
+```
+
+The committed report covers correct support, altered values, wrong evidence
+kinds, unsupported extrapolation, invented citations, hidden conflicts, stale
+evidence, embedded instructions and malformed proposals.
