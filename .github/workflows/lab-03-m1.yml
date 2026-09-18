@@ -28,3 +28,6 @@ jobs:
       - name: Run governed contract tests
         working-directory: labs/lab-03-governed-evidence-agent/reference_impl/python
         run: python -m unittest -v
+      - name: Verify M3 adversarial report
+        working-directory: labs/lab-03-governed-evidence-agent/reference_impl/python
+        run: python run_m3_evaluation.py --check
