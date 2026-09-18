@@ -108,7 +108,7 @@ def _secret_paths(value: Any, path: str = "$") -> list[str]:
     return paths
 
 
-def _validated_configuration(adapter: ModelAdapter) -> Mapping[str, Any]:
+def validated_configuration(adapter: ModelAdapter) -> Mapping[str, Any]:
     configuration = adapter.configuration()
     if not isinstance(configuration, Mapping):
         raise ModelBoundaryError("adapter configuration must be an object")
@@ -215,7 +215,7 @@ def run_with_adapter(packet: EvidencePacket, adapter: ModelAdapter) -> ModelRunR
             raise ModelBoundaryError("adapter provider is required")
         if not isinstance(model, str) or not model:
             raise ModelBoundaryError("adapter model is required")
-        configuration = _validated_configuration(adapter)
+        configuration = validated_configuration(adapter)
         generated = adapter.generate(request)
         if not isinstance(generated, Mapping):
             raise ModelBoundaryError("adapter must return an object")

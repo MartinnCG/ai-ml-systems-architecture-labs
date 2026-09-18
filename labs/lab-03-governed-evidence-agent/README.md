@@ -74,8 +74,10 @@ template, model/configuration, validator version and final disposition.
 - **M0 complete:** contracts, trust boundaries and evaluation gates reviewed.
 - **M1 complete:** deterministic baseline, audit record, public fixture and
   adversarial tests.
-- **M2 implemented for review:** provider-neutral model boundary with strict
-  proposal parsing and audit digests; verified with fake adapters and no API.
+- **M2 complete:** provider-neutral model boundary with strict proposal
+  parsing and audit digests; verified with fake adapters and no API.
+- **M3 implemented for review:** typed assertions, deterministic factual
+  rendering and a reproducible adversarial semantic-support report.
 
 ## Delivery sequence
 
